@@ -1,0 +1,46 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.about, .social {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.social ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social li {
+    margin: 0.5rem 0;
+}
+
+.social a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
