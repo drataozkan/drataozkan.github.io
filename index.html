@@ -1,31 +1,66 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Atakan Özkan</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Ata Özkan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 </head>
-<body>
-    <header>
-        <h1>Atakan Özkan</h1>
-        <p>Medical Student | AI Enthusiast | Research-Oriented</p>
-    </header>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a medical student with a strong interest in artificial intelligence, academic research, and digital health.
-        I aim to contribute to the future of medicine through interdisciplinary approaches that combine clinical insight with technology.</p>
+<body class="bg-sky-100 dark:bg-gray-900 dark:text-gray-100 text-gray-900 font-sans">
+  <header class="bg-gray-100 dark:bg-gray-800 shadow p-6">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Dr. Ata Özkan</h1>
+      <nav class="space-x-4">
+        <a href="#about" class="text-blue-600 dark:text-blue-400 hover:underline">Hakkımda</a>
+        <a href="#projects" class="text-blue-600 dark:text-blue-400 hover:underline">Projeler</a>
+        <a href="#contact" class="text-blue-600 dark:text-blue-400 hover:underline">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <section id="about" class="my-10 text-center">
+      <img src="profil-foto.jpg" alt="Dr. Ata Özkan" class="w-40 h-40 mx-auto rounded-full shadow-md mb-4">
+      <h2 class="text-xl font-semibold mb-4">Hakkımda</h2>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        Merhaba! Ben Atakan Özkan. Tıp doktoruyum ve yapay zeka ile tıbbın kesişim noktasında çalışıyorum.
+        Klinik karar destek sistemleri, dijital sağlık çözümleri ve sağlık verisinin anlamlandırılması ile ilgileniyorum.
+      </p>
     </section>
-    <section class="social">
-        <h2>Connect with me</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/drataozkan" target="_blank">LinkedIn</a></li>
-            <li><a href="https://x.com/dr_ataozkan" target="_blank">Twitter (X)</a></li>
-            <li><a href="https://www.instagram.com/ataoz.kan" target="_blank">Instagram</a></li>
-        </ul>
+
+    <section id="projects" class="my-10">
+      <h2 class="text-xl font-semibold mb-4">Projeler</h2>
+      <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
+        <li>Substack yazıları: Klinik ve teknolojik perspektiften güncel konular</li>
+        <li>Patoloji ve yapay zeka üzerine araştırma iş birlikleri</li>
+        <li>Sağlıkta veri bilimi çalışmaları</li>
+      </ul>
     </section>
-    <footer>
-        <p>&copy; 2025 Atakan Özkan</p>
-    </footer>
+
+    <section id="contact" class="my-10">
+      <h2 class="text-xl font-semibold mb-4">Sosyal Medya</h2>
+      <div class="flex space-x-4">
+        <a href="https://x.com/dr_ataozkan" target="_blank" class="text-blue-500 dark:text-blue-400 hover:underline">X (Twitter)</a>
+        <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="text-pink-500 dark:text-pink-300 hover:underline">Instagram</a>
+        <a href="https://open.substack.com/@drataozkan" target="_blank" class="text-yellow-600 dark:text-yellow-400 hover:underline">Substack</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 dark:bg-gray-800 p-4 text-center text-gray-500 dark:text-gray-400 text-sm">
+    &copy; 2025 Dr. Atakan Özkan. Tüm hakları saklıdır.
+  </footer>
+
+  <script>
+    // Koyu mod kullanıcı tercihine göre otomatik
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark')
+    }
+  </script>
 </body>
 </html>
