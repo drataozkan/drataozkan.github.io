@@ -34,7 +34,8 @@
   </header>
 
   <main class="max-w-5xl mx-auto p-6">
-    <p class="text-center text-lg text-blue-800 dark:text-blue-300 font-semibold mb-6 animate-pulse slide-in" id="animated-message">Beni Türk Hekimlerine Emanet Ediniz - Mustafa Kemal ATATÜRK
+    <p class="text-center text-lg text-blue-800 dark:text-blue-300 font-semibold mb-6 animate-pulse slide-in" id="animated-message">
+      Beni Türk Hekimlerine Emanet Ediniz - Mustafa Kemal ATATÜRK
     </p>
 
     <!-- English Content -->
@@ -149,10 +150,10 @@
       const animatedMessage = document.getElementById('animated-message');
       if (lang === 'tr') {
         document.getElementById('tr-content').classList.remove('hidden');
-        if (animatedMessage) animatedMessage.textContent = '* bunu düşünelim sonra *';
+        if (animatedMessage) animatedMessage.textContent = 'Beni Türk Hekimlerine Emanet Ediniz - Mustafa Kemal ATATÜRK';
       } else {
         document.getElementById('en-content').classList.remove('hidden');
-        if (animatedMessage) animatedMessage.textContent = '* bunu da *';
+        if (animatedMessage) animatedMessage.textContent = 'Entrust me to Turkish doctors - Mustafa Kemal ATATÜRK';
       }
       setTimeout(() => AOS.refresh(), 50);
     }
