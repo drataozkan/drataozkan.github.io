@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geçmiş Deneyimlerim - Atakan Özkan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+<body class="bg-blue-950 dark:bg-blue-950 text-gray-100 font-sans">
+  <header class="bg-sky-500 dark:bg-sky-500 p-6 shadow">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Atakan Özkan</h1>
+      <div class="space-x-2">
+        <button onclick="switchLang('tr')">🇹🇷</button>
+        <button onclick="switchLang('en')">🇺🇸</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10">
+    <!-- Turkish Content -->
+    <div id="tr-content">
+      <h1 class="text-3xl font-bold mb-6">Geçmiş Deneyimlerim</h1>
+      <p class="mb-6 leading-relaxed">
+        Yaşamım boyunca bilimsel ve sosyal sorumluluk çalışmalarını takip ettim.
+      </p>
+
+      <div class="space-y-6 text-gray-300">
+        <div>
+          <h2 class="text-xl font-semibold">Klinik Stajlar</h2>
+          <p>Gaziemir D.H. ve Behçet Uz D.H.'de acil servis gözlem ve klinik stajlarımı tamamladım.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold">Uluslararası Deneyim</h2>
+          <p>Cliexa HealthTech (ABD) ile dijital sağlık ve yapay zekâ projelerinde görev aldım.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold">Dernek Üyelikleri</h2>
+          <p>Society of Physician Entrepreneurs (SoPE) ve Türk Toraks Derneği (TTD) gibi organizasyonlara üyeyim ve etkinliklerine aktif olarak katılıyorum.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold">Bilimsel Etkinlikler</h2>
+          <ul class="list-disc ml-6 mt-2 space-y-1">
+            <li>Tıp Bilişimi Derneği - 16. Tıp Bilişimi Kongresi - 22-23 Mayıs 2025 Ankara</li>
+            <li>EGİAD/ESİAD - Yapay Zeka Zirvesi - 15 Mayıs 2025 İzmir İnovasyon Merkezi</li>
+            <li>Cerrahpaşa Tıp Fakültesi - Gelişen Tıp Teknolojileri Semineri - 12 Nisan 2025 Online</li>
+            <li>Türk Biyokimya Derneği - IX. Türkiye <em>in vitro Diyagnostik</em> Sempozyumu - 9-11 Nisan 2025 DEÜ Sabancı Kültür Merkezi</li>
+            <li>TTD - 28. Yıllık Kongresi, Tıpta Yapay Zeka Kullanımı Kursu - 6 Nisan 2025 Online</li>
+            <li>DEÜ - Acilin Nabzı Sempozyumu - 22 Mart 2025 DEÜ</li>
+            <li>UBİAT - Oftalmoloji Kongresi - 21-23 Şubat 2025 Bursa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- English Content -->
+    <div id="en-content" class="hidden">
+      <h1 class="text-3xl font-bold mb-6">Past Experiences</h1>
+      <p class="mb-6 leading-relaxed">
+        Throughout my life, I have engaged in scientific and social responsibility projects.
+      </p>
+
+      <div class="space-y-6 text-gray-300">
+        <div>
+          <h2 class="text-xl font-semibold">Clinical Internships</h2>
+          <p>I completed emergency department observation and clinical rotations at Gaziemir State Hospital and Behçet Uz Children's Hospital.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold">International Experience</h2>
+          <p>I worked on </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold">Memberships</h2>
+          <p>I am a member of the Society of Physician Entrepreneurs (SoPE) and the Turkish Thoracic Society (TTD), actively participating in their events.</p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold">Scientific Events</h2>
+          <ul class="list-disc ml-6 mt-2 space-y-1">
+            <li>Turkish Medical Informatics Society - 16th Congress of Medical Informatics - May 22-23, 2025, Ankara</li>
+            <li>EGİAD/ESİAD - Artificial Intelligence Summit - May 15, 2025, Izmir Innovation Center</li>
+            <li>Cerrahpasa Faculty of Medicine - Emerging Medical Technologies Seminar - April 12, 2025, Online</li>
+            <li>Turkish Biochemistry Society - IX. Turkey <em>in vitro Diagnostics</em> Symposium - April 9-11, 2025, DEU Sabancı Cultural Center</li>
+            <li>TTD - 28th Annual Congress, AI in Medicine Course - April 6, 2025, Online</li>
+            <li>DEU - Pulse of Emergency Medicine Symposium - March 22, 2025, DEU</li>
+            <li>UBİAT - Ophthalmology Congress - February 21-23, 2025, Bursa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">Anasayfaya Dön</a>
+    </div>
+  </main>
+
+  <footer class="bg-sky-900 p-4 text-center text-sm text-gray-400">
+    &copy; 2025 Dr. Atakan Özkan. Tüm hakları saklıdır.
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById('tr-content').classList.add('hidden');
+      document.getElementById('en-content').classList.add('hidden');
+      document.getElementById(lang + '-content').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
