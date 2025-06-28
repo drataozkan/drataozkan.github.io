@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -34,8 +35,8 @@
 
       <p class="text-xs text-gray-500 dark:text-gray-600 italic">You can switch to English</p>
       <div class="flex gap-4 items-center">
-        <button onclick="switchLang('tr')">🇹🇷</button>
-        <button onclick="switchLang('en')">🇺🇸</button>
+        <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
+        <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
       </div>
     </div>
   </header>
@@ -155,15 +156,25 @@
       document.getElementById('en-content').classList.add('hidden');
       document.getElementById('tr-content').classList.add('hidden');
       const animatedMessage = document.getElementById('animated-message');
+      const btnTr = document.getElementById('btn-tr');
+      const btnEn = document.getElementById('btn-en');
+
+      btnTr.classList.remove('underline', 'font-bold');
+      btnEn.classList.remove('underline', 'font-bold');
+
       if (lang === 'tr') {
         document.getElementById('tr-content').classList.remove('hidden');
         if (animatedMessage) animatedMessage.textContent = 'Beni Türk Hekimlerine Emanet Ediniz - Mustafa Kemal ATATÜRK';
+        btnTr.classList.add('underline', 'font-bold');
       } else {
         document.getElementById('en-content').classList.remove('hidden');
         if (animatedMessage) animatedMessage.textContent = 'Entrust me to Turkish doctors - Mustafa Kemal ATATÜRK';
+        btnEn.classList.add('underline', 'font-bold');
       }
+
       setTimeout(() => AOS.refresh(), 50);
     }
+
     switchLang('tr');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
