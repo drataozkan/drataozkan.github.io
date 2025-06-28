@@ -10,59 +10,81 @@
       darkMode: 'class',
     }
   </script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-sky-200 dark:bg-blue-950 dark:text-gray-100 text-gray-900 font-sans">
   <header class="bg-sky-300 dark:bg-sky-500 shadow p-6">
-    <div class="max-w-4xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Atakan Özkan</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="text-blue-700 dark:text-blue-300 hover:underline">About</a>
-        <a href="#projects" class="text-blue-700 dark:text-blue-300 hover:underline">Projects</a>
-        <a href="#contact" class="text-blue-700 dark:text-blue-300 hover:underline">Contact</a>
-      </nav>
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Dr. Atakan Özkan</h1>
+      <div class="flex gap-4 items-center">
+        <button onclick="switchLang('tr')" class="hover:underline">TR</button>
+        <button onclick="switchLang('en')" class="hover:underline">EN</button>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto p-6">
-    <section id="about" class="my-10 text-center">
-      <img src="IMG_7806.jpg" alt="Dr. Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-md mb-4">
-      <h2 class="text-xl font-semibold mb-4">About</h2>
-      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-        <p>Hello! I'm <strong>Atakan Özkan</strong>, a <strong>medical intern</strong> passionate about bridging the gap between <strong>medicine</strong> and <strong>artificial intelligence</strong>.</p>
+  <main class="max-w-5xl mx-auto p-6">
+    <!-- English Content (default) -->
+    <div id="en-content">
+      <!-- Profile Section -->
+      <section class="my-10 text-center">
+        <img src="IMG_7806.jpg" alt="Dr. Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-lg mb-4">
+        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+        <p class="mb-4">Hello! I'm <strong>Dr. Atakan Özkan</strong>, a medical intern passionate about AI in medicine and digital healthcare transformation.</p>
+        <ul class="list-disc text-left max-w-xl mx-auto mt-2 text-gray-700 dark:text-gray-300">
+          <li>AI-powered clinical decision support systems</li>
+          <li>Digital health innovations</li>
+          <li>Predictive data modeling in healthcare</li>
+        </ul>
+      </section>
 
-<p>My academic and professional interests revolve around:</p>
-<ul>
-  <li><strong>Clinical decision support systems</strong> that empower physicians with AI-driven insights</li>
-  <li><strong>Digital health innovations</strong> that improve patient care and health system efficiency</li>
-  <li><strong>Healthcare data analysis</strong> for predictive modeling and outcome optimization</li>
-</ul>
+      <!-- Projects Section with Images -->
+      <section class="my-10">
+        <h2 class="text-xl font-semibold mb-4 text-center">Projects & Events</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-blue-900 rounded shadow p-4">
+            <img src="project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded mb-2">
+            <h3 class="font-bold">AI Research Collaboration</h3>
+            <p class="text-sm">Exploring AI in pathology.</p>
+          </div>
+          <div class="bg-white dark:bg-blue-900 rounded shadow p-4">
+            <img src="event1.jpg" alt="Event 1" class="w-full h-40 object-cover rounded mb-2">
+            <h3 class="font-bold">Conference Presentation</h3>
+            <p class="text-sm">Spoke at Digital Health 2024.</p>
+          </div>
+          <div class="bg-white dark:bg-blue-900 rounded shadow p-4">
+            <img src="project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded mb-2">
+            <h3 class="font-bold">Healthcare Startup</h3>
+            <p class="text-sm">Building tools for clinicians.</p>
+          </div>
+        </div>
+      </section>
 
-<p>Through research, collaboration, and content creation, I aim to contribute to a future where technology enhances—not replaces—the human side of medicine.</p>
-
-<p>Let’s connect and build the future of digital healthcare together.</p>
-      </p>
-    </section>
-
-    <section id="projects" class="my-10">
-      <h2 class="text-xl font-semibold mb-4">Projects</h2>
-      <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-        <li>Substack essays on clinical and technological perspectives</li>
-        <li>Research collaborations in pathology and artificial intelligence</li>
-        <li>Healthcare data science initiatives</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="my-10">
-      <h2 class="text-xl font-semibold mb-4">Social Media</h2>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="text-blue-800 dark:text-blue-300 hover:underline">LinkedIn</a>
-        <a href="https://substack.com/@drataozkan" target="_blank" class="text-yellow-700 dark:text-yellow-400 hover:underline">Substack</a>
-        <a href="https://x.com/dr_ataozkan" target="_blank" class="text-blue-500 dark:text-blue-400 hover:underline">X (Twitter)</a>
-        <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="text-pink-500 dark:text-pink-300 hover:underline">Instagram</a>
-        <a href="https://github.com/drataozkan" target="_blank" class="text-gray-800 dark:text-gray-200 hover:underline">GitHub</a>
-        <a href="https://medium.com/@drataozkan" target="_blank" class="text-green-700 dark:text-green-300 hover:underline">Medium</a>
-      </div>
-    </section>
+      <!-- Social Media -->
+      <section id="contact" class="my-10 text-center">
+        <h2 class="text-xl font-semibold mb-4">Social Media</h2>
+        <div class="flex flex-wrap justify-center gap-4 text-lg">
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="flex items-center gap-2 hover:underline">
+            <i class="fab fa-linkedin text-blue-800"></i> LinkedIn
+          </a>
+          <a href="https://substack.com/@drataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
+            <i class="fas fa-envelope-open-text text-yellow-700"></i> Substack
+          </a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
+            <i class="fab fa-x-twitter text-blue-500"></i> X (Twitter)
+          </a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="flex items-center gap-2 hover:underline">
+            <i class="fab fa-instagram text-pink-500"></i> Instagram
+          </a>
+          <a href="https://github.com/drataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
+            <i class="fab fa-github text-gray-800"></i> GitHub
+          </a>
+          <a href="https://medium.com/@drataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
+            <i class="fab fa-medium text-green-700"></i> Medium
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="bg-sky-300 dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm">
@@ -70,8 +92,12 @@
   </footer>
 
   <script>
+    function switchLang(lang) {
+      document.getElementById('en-content').classList.toggle('hidden', lang !== 'en');
+    }
+    switchLang('en');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark')
+      document.documentElement.classList.add('dark');
     }
   </script>
 </body>
