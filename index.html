@@ -3,85 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Atakan Özkan</title>
+  <title>Atakan Özkan</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
     }
   </script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-sky-200 dark:bg-blue-950 dark:text-gray-100 text-gray-900 font-sans">
   <header class="bg-sky-300 dark:bg-sky-500 shadow p-6">
     <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold"> Atakan Özkan</h1>
+      <p class="text-xs text-gray-500 dark:text-gray-600 italic">You can switch to English</p>
       <div class="flex gap-4 items-center">
-        <button onclick="switchLang('tr')" class="hover:underline">TR</button>
-        <button onclick="switchLang('en')" class="hover:underline">EN</button>
+        <button onclick="switchLang('tr')">🇹🇷</button>
+        <button onclick="switchLang('en')">🇺🇸</button>
       </div>
     </div>
   </header>
 
   <main class="max-w-5xl mx-auto p-6">
     <!-- English Content (default) -->
-    <div id="en-content">
-      <!-- Profile Section -->
+    <div id="en-content" class="hidden">
       <section class="my-10 text-center">
-        <img src="IMG_7806.jpg" alt="Dr. Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-lg mb-4">
+        <img src="/IMG_7806.jpg" alt="Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-lg mb-4">
         <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-        <p class="mb-4">Hello! I'm <strong>Dr. Atakan Özkan</strong>, a medical intern passionate about AI in medicine and digital healthcare transformation.</p>
+        <p class="mb-4">I'm <strong>Atakan Özkan</strong>, a medical intern passionate about AI in medicine and digital healthcare innovation.</p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Projects</h3>
         <ul class="list-disc text-left max-w-xl mx-auto mt-2 text-gray-700 dark:text-gray-300">
           <li>AI-powered clinical decision support systems</li>
-          <li>Digital health innovations</li>
-          <li>Predictive data modeling in healthcare</li>
+          <li>Digital health innovation</li>
+          <li>Medical data science</li>
         </ul>
-      </section>
-
-      <!-- Projects Section with Images -->
-      <section class="my-10">
-        <h2 class="text-xl font-semibold mb-4 text-center">Projects & Events</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-white dark:bg-blue-900 rounded shadow p-4">
-            <img src="project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded mb-2">
-            <h3 class="font-bold">AI Research Collaboration</h3>
-            <p class="text-sm">Exploring AI in pathology.</p>
-          </div>
-          <div class="bg-white dark:bg-blue-900 rounded shadow p-4">
-            <img src="event1.jpg" alt="Event 1" class="w-full h-40 object-cover rounded mb-2">
-            <h3 class="font-bold">Conference Presentation</h3>
-            <p class="text-sm">Spoke at Digital Health 2024.</p>
-          </div>
-          <div class="bg-white dark:bg-blue-900 rounded shadow p-4">
-            <img src="project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded mb-2">
-            <h3 class="font-bold">Healthcare Startup</h3>
-            <p class="text-sm">Building tools for clinicians.</p>
-          </div>
+        <div class="mt-6">
+          <h3 class="text-xl font-semibold mb-2">Memberships</h3>
+          <ul class="text-gray-800 dark:text-gray-200 list-disc list-inside">
+            <li>Society of Physician Entrepreneurs (SoPE)</li>
+            <li>Turkish Thoracic Society (TTD)</li>
+          </ul>
         </div>
       </section>
 
       <!-- Social Media -->
       <section id="contact" class="my-10 text-center">
-        <h2 class="text-xl font-semibold mb-4">Social Media</h2>
-        <div class="flex flex-wrap justify-center gap-4 text-lg">
-          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="flex items-center gap-2 hover:underline">
-            <i class="fab fa-linkedin text-blue-800"></i> LinkedIn
-          </a>
-          <a href="https://substack.com/@drataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
-            <i class="fas fa-envelope-open-text text-yellow-700"></i> Substack
-          </a>
-          <a href="https://x.com/dr_ataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
-            <i class="fab fa-x-twitter text-blue-500"></i> X (Twitter)
-          </a>
-          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="flex items-center gap-2 hover:underline">
-            <i class="fab fa-instagram text-pink-500"></i> Instagram
-          </a>
-          <a href="https://github.com/drataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
-            <i class="fab fa-github text-gray-800"></i> GitHub
-          </a>
-          <a href="https://medium.com/@drataozkan" target="_blank" class="flex items-center gap-2 hover:underline">
-            <i class="fab fa-medium text-green-700"></i> Medium
-          </a>
+        <h2 class="text-xl font-semibold mb-4">Connect With Me</h2>
+        <div class="flex flex-wrap justify-center gap-6 text-lg mb-6">
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
+          <a href="https://substack.com/@drataozkan" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
+          <a href="https://github.com/drataozkan" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
+          <a href="https://medium.com/@drataozkan" target="_blank" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
+        </div>
+        <div class="text-gray-800 dark:text-gray-300 text-base">
+          <p class="mb-1">📧 ataozkan.md@gmail.com</p>
+          <p>📞 +90 532 615 73 20</p>
+        </div>
+        <div class="mt-6">
+          <a href="mailto:ataozkan.md@gmail.com" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Book an Appointment</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Turkish Content -->
+    <div id="tr-content">
+      <section class="my-10 text-center">
+        <img src="/IMG_7806.jpg" alt="Dr. Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-lg mb-4">
+        <h2 class="text-2xl font-semibold mb-4">Hakkımda</h2>
+        <p class="mb-4">Merhaba, ben <strong>Atakan Özkan</strong>, Dokuz Eylül Üniversitesi Tıp Fakültesi öğrencisiyim. Çocukluğumdan beri bilime teknolojiye ve astronomiye derin bir ilgim var. Takım çalışmalarını ve yeni deneyimleri seviyorum. Bana aşağıdaki bağlantılardan ulaşabilsiniz.</p>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Aktif İlgi Alanlarım</h3>
+        <ul class="list-disc text-left max-w-xl mx-auto mt-2 text-gray-700 dark:text-gray-300">
+          <li>Yapay zeka destekli klinik karar destek sistemleri</li>
+          <li>Dijital sağlık inovasyonu</li>
+          <li>Tıpta veri bilimi</li>
+        </ul>
+        <div class="mt-6">
+          <h3 class="text-xl font-semibold mb-2">Üyelikler</h3>
+          <ul class="text-gray-800 dark:text-gray-200 list-disc list-inside">
+            <li>Physician Entrepreneurs Derneği (SoPE)</li>
+            <li>Türk Toraks Derneği (TTD)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact-tr" class="my-10 text-center">
+        <h2 class="text-xl font-semibold mb-4">İletişim</h2>
+        <div class="flex flex-wrap justify-center gap-6 text-lg mb-6">
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
+          <a href="https://substack.com/@drataozkan" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
+          <a href="https://github.com/drataozkan" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
+          <a href="https://medium.com/@drataozkan" target="_blank" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
+        </div>
+        <div class="text-gray-800 dark:text-gray-300 text-base">
+          <p class="mb-1">📧 ataozkan.md@gmail.com</p>
+          <p>📞 +90 532 615 73 20</p>
+        </div>
+        <div class="mt-6">
+          <a href="mailto:ataozkan.md@gmail.com" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Randevu Al</a>
         </div>
       </section>
     </div>
@@ -93,9 +113,15 @@
 
   <script>
     function switchLang(lang) {
-      document.getElementById('en-content').classList.toggle('hidden', lang !== 'en');
+      document.getElementById('en-content').classList.add('hidden');
+      document.getElementById('tr-content').classList.add('hidden');
+      if (lang === 'tr') {
+        document.getElementById('tr-content').classList.remove('hidden');
+      } else {
+        document.getElementById('en-content').classList.remove('hidden');
+      }
     }
-    switchLang('en');
+    switchLang('tr');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
     }
