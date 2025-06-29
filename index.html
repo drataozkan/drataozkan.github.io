@@ -37,6 +37,7 @@
       <div class="flex gap-4 items-center">
         <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
         <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
+        <button id="toggle-theme" onclick="toggleTheme()">🌌</button>
       </div>
     </div>
   </header>
@@ -179,6 +180,31 @@
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
     }
+    
+    function toggleTheme() {
+      const html = document.documentElement;
+      const btn = document.getElementById('toggle-theme');
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      btn.textContent = isDark ? '🌅' : '🌌';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      window.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('toggle-theme');
+        if (btn) btn.textContent = '🌅';
+      });
+    } else {
+      window.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('toggle-theme');
+        if (btn) btn.textContent = '🌌';
+      });
+    }
+
+
     AOS.init();
   </script>
 </body>
