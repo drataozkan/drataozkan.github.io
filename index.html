@@ -147,7 +147,9 @@
     </div>
   </main>
 
-  <div id="visitor-counter" class="text-center text-xs text-gray-600 dark:text-gray-400 mb-2"></div>
+  <div id="visitor-counter" class="text-center text-xs text-gray-600 dark:text-gray-400 mb-2">
+  Bu site <span id="visit-count">...</span> kez ziyaret edildi.
+</div>
 <footer class="bg-sky-300 dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm">
     &copy; 2025 Dr. Atakan Özkan. All rights reserved.
   </footer>
@@ -181,17 +183,12 @@
       document.documentElement.classList.add('dark');
     }
     AOS.init();
-// Ziyaretçi sayacı (tarayıcıya özgü sayar)
-if (!localStorage.getItem("visited")) {
-  let count = localStorage.getItem("visit-count") || 0;
-  count++;
-  localStorage.setItem("visit-count", count);
-  localStorage.setItem("visited", "true");
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const visitCount = localStorage.getItem("visit-count") || 1;
-  document.getElementById("visitor-counter").textContent = `Bu sayfa tarayıcınızda ${visitCount} kez görüntülendi.`;
-});
+// CountAPI ile herkese açık ziyaretçi sayacı
+fetch('https://api.countapi.xyz/update/atakan-site/visits/?amount=1')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('visit-count').textContent = data.value;
+  });
   </script>
 </body>
 </html>
