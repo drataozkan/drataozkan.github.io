@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -26,15 +27,16 @@
 <body class="bg-sky-200 dark:bg-blue-950 dark:text-gray-100 text-gray-900 font-sans">
   <header class="bg-sky-300 dark:bg-sky-500 shadow p-6 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#tr-content" class="hover:underline">Hakkımda</a>
-        <a href="#contact-tr" class="hover:underline">İletişim</a>
-      </nav>
+    
+<nav class="hidden md:flex gap-6 text-sm font-medium">
+  <a href="#tr-content" class="hover:underline">Hakkımda</a>
+  <a href="#contact-tr" class="hover:underline">İletişim</a>
+</nav>
+
       <p class="text-xs text-gray-500 dark:text-gray-600 italic">You can switch to English</p>
       <div class="flex gap-4 items-center">
         <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
         <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
-        <button id="toggle-theme" onclick="toggleTheme()">🌌</button>
       </div>
     </div>
   </header>
@@ -44,8 +46,105 @@
       Beni Türk Hekimlerine Emanet Ediniz - Mustafa Kemal ATATÜRK
     </p>
 
-    <!-- İçerikler burada devam ediyor (daha önce verilmişti) -->
-    <!-- Bu dosya kısaltılmıştır; uzunluk nedeniyle kodun geri kalanını aşağıda tamamlayacağım. -->
+    <!-- English Content -->
+    <div id="en-content" class="hidden" data-aos="fade-up">
+      <section class="my-10 text-center">
+        <div class="relative">
+          <img loading="lazy" src="arka-plan-foto.jpeg" alt="background" class="w-full h-40 object-cover rounded-md shadow mb-[-4rem]">
+          <img loading="lazy" src="/IMG_7806.jpg" alt="Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-lg relative z-10 border-4 border-white dark:border-blue-950">
+        </div>
+        <h2 class="text-2xl font-semibold mt-6 mb-4">About Me</h2>
+        <p class="mb-4">I'm <strong>Atakan Özkan</strong>, a medical intern passionate about AI in medicine and digital healthcare innovation.</p>
+        <div class="flex flex-col items-center space-y-4 mt-4">
+          <a href="cv-atakan-ozkan.pdf" download class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded">📄 Download My CV</a>
+          <a href="gecmis-deneyimlerim.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded shadow">Past Experiences</a>
+        </div>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Projects</h3>
+        <ul class="list-disc text-left max-w-xl mx-auto mt-2 text-gray-700 dark:text-gray-300">
+          <li>AI-powered clinical decision support systems</li>
+          <li>Digital health innovation</li>
+          <li>Medical data science</li>
+        </ul>
+        <div class="mt-6">
+          <a href="mailto:ataozkan.md@gmail.com?subject=collaboration" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded shadow">🤝 Collaborate</a>
+        </div>
+        <div class="mt-6">
+          <h3 class="text-xl font-semibold mb-2">Memberships</h3>
+          <ul class="text-gray-800 dark:text-gray-200 list-disc list-inside">
+            <li>Society of Physician Entrepreneurs (SoPE)</li>
+            <li>Turkish Thoracic Society (TTD)</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="my-10 text-center" data-aos="fade-up">
+        <h2 class="text-xl font-semibold mb-4">Connect With Me</h2>
+        <div class="flex flex-wrap justify-center gap-6 text-lg mb-6">
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
+          <a href="https://substack.com/@drataozkan" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
+          <a href="https://github.com/drataozkan" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
+          <a href="https://medium.com/@drataozkan" target="_blank" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
+        </div>
+        <div class="text-gray-800 dark:text-gray-300 text-base">
+          <p class="mb-1">📧 ataozkan.md@gmail.com</p>
+          <p>📞 +90 532 615 73 20</p>
+        </div>
+        <div class="mt-6">
+          <a href="mailto:ataozkan.md@gmail.com?subject=appointment%20request" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Book an Appointment</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Turkish Content -->
+    <div id="tr-content" data-aos="fade-up">
+      <section class="my-10 text-center">
+        <div class="relative">
+          <img loading="lazy" src="arka-plan-foto.jpeg" alt="arka plan" class="w-full h-40 object-cover rounded-md shadow mb-[-4rem]">
+          <img loading="lazy" src="/IMG_7806.jpg" alt="Dr. Atakan Özkan" class="w-40 h-40 mx-auto rounded-full shadow-lg relative z-10 border-4 border-white dark:border-blue-950">
+        </div>
+        <h2 class="text-2xl font-semibold mt-6 mb-4">Hakkımda</h2>
+        <p class="mb-4">Merhaba, ben <strong>Atakan Özkan</strong>, Dokuz Eylül Üniversitesi Tıp Fakültesi öğrencisiyim. Çocukluğumdan beri bilime teknolojiye ve astronomiye derin bir ilgim var. Takım çalışmalarını ve yeni deneyimleri seviyorum. Bana aşağıdaki bağlantılardan ulaşabilirsiniz.</p>
+        <div class="flex flex-col items-center space-y-4 mt-4">
+          <a href="cv-atakan-ozkan.pdf" download class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded">📄 CV İndir</a>
+          <a href="gecmis-deneyimlerim.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded shadow">Geçmiş Deneyimlerim</a>
+        </div>
+        <h3 class="text-xl font-semibold mt-6 mb-2">Aktif İlgi Alanlarım</h3>
+        <ul class="list-disc text-left max-w-xl mx-auto mt-2 text-gray-700 dark:text-gray-300">
+          <li>Yapay zeka destekli klinik karar destek sistemleri</li>
+          <li>Dijital sağlık inovasyonu</li>
+          <li>Tıpta veri bilimi</li>
+        </ul>
+        <div class="mt-6">
+          <a href="mailto:ataozkan.md@gmail.com?subject=iş%20birliği" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded shadow">🤝 İş Birliği</a>
+        </div>
+        <div class="mt-6">
+          <h3 class="text-xl font-semibold mb-2">Üyelikler</h3>
+          <ul class="text-gray-800 dark:text-gray-200 list-disc list-inside">
+            <li>Society of Physician Entrepreneurs (SoPE)</li>
+            <li>Türk Toraks Derneği (TTD)</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact-tr" class="my-10 text-center" data-aos="fade-up">
+        <h2 class="text-xl font-semibold mb-4">İletişim</h2>
+        <div class="flex flex-wrap justify-center gap-6 text-lg mb-6">
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
+          <a href="https://substack.com/@drataozkan" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
+          <a href="https://github.com/drataozkan" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
+          <a href="https://medium.com/@drataozkan" target="_blank" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
+        </div>
+        <div class="text-gray-800 dark:text-gray-300 text-base">
+          <p class="mb-1">📧 ataozkan.md@gmail.com</p>
+          <p>📞 +90 532 615 73 20</p>
+        </div>
+        <div class="mt-6">
+          <a href="mailto:ataozkan.md@gmail.com?subject=randevu%20talebi" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Randevu Al</a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="bg-sky-300 dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm">
@@ -76,25 +175,10 @@
       setTimeout(() => AOS.refresh(), 50);
     }
 
-    function toggleTheme() {
-      const html = document.documentElement;
-      const btn = document.getElementById('toggle-theme');
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      btn.textContent = isDark ? '🌅' : '🌌';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    }
-
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('toggle-theme');
-        if (btn) btn.textContent = '🌅';
-      });
-    }
-
     switchLang('tr');
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
     AOS.init();
   </script>
 </body>
