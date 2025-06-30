@@ -153,7 +153,20 @@
         </div>
       </section>
     </div>
-  </main>
+  
+<p class="text-center text-sm text-gray-700 dark:text-gray-300 mt-8">
+  Bu site <span id="counter">yükleniyor...</span> kez ziyaret edildi.
+</p>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/drataozkan-ziyaret/visits')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('counter').innerText = data.value;
+    });
+</script>
+
+</main>
 
   <footer class="bg-white dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm">
     &copy; 2025 Dr. Atakan Özkan. All rights reserved.
