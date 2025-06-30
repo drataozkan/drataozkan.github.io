@@ -222,13 +222,13 @@
       try {
         const response = await fetch('https://visitor-counter-drataozkan.onrender.com/');
         const data = await response.json();
-        // Türkçe ve İngilizce alanlara yaz (TASARIM GÜNCELLENDİ)
+        // Türkçe ve İngilizce alanlara yaz (Kutucuk yok, koyu renkli ve kalın)
         if (document.getElementById('visitor-count-tr'))
           document.getElementById('visitor-count-tr').innerHTML =
-            `<span class="inline-block bg-blue-100 dark:bg-blue-900 text-gray-500 text-sm font-normal px-4 py-2 rounded-lg shadow-sm mt-6">Bu site ${data.count} kez ziyaret edildi.</span>`;
+            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">Bu site ${data.count} kez ziyaret edildi.</span>`;
         if (document.getElementById('visitor-count-en'))
           document.getElementById('visitor-count-en').innerHTML =
-            `<span class="inline-block bg-blue-100 dark:bg-blue-900 text-gray-500 text-sm font-normal px-4 py-2 rounded-lg shadow-sm mt-6">This site has been visited ${data.count} times.</span>`;
+            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">This site has been visited ${data.count} times.</span>`;
       } catch (error) {
         if (document.getElementById('visitor-count-tr'))
           document.getElementById('visitor-count-tr').textContent = "Ziyaretçi sayısı alınamadı.";
