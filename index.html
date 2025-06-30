@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -101,8 +100,8 @@
         <div class="mt-6">
           <a href="mailto:ataozkan.md@gmail.com?subject=appointment%20request" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Book an Appointment</a>
         </div>
-<p id="visitor-count-en" class="mt-4 text-base text-white bg-blue-700 px-4 py-2 rounded shadow font-semibold text-center">Loading visitor count...</p>
-
+        <!-- Ziyaretçi sayacı İngilizce için -->
+        <div id="visitor-count-en" class="my-4"></div>
       </section>
     </div>
 
@@ -153,8 +152,8 @@
         <div class="mt-6">
           <a href="mailto:ataozkan.md@gmail.com?subject=randevu%20talebi" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Randevu Al</a>
         </div>
-<p id="visitor-count-tr" class="mt-4 text-base text-white bg-blue-700 px-4 py-2 rounded shadow font-semibold text-center">Ziyaretçi sayısı yükleniyor...</p>
-
+        <!-- Ziyaretçi sayacı Türkçe için -->
+        <div id="visitor-count-tr" class="my-4"></div>
       </section>
     </div>
   </main>
@@ -217,6 +216,27 @@
 
 
     AOS.init();
+  </script>
+  <script>
+    async function updateVisitorCount() {
+      try {
+        const response = await fetch('https://visitor-counter-drataozkan.onrender.com/');
+        const data = await response.json();
+        // Türkçe ve İngilizce alanlara yaz
+        if (document.getElementById('visitor-count-tr'))
+          document.getElementById('visitor-count-tr').innerHTML =
+            `<span class="inline-block bg-blue-700 text-white px-4 py-2 rounded font-semibold shadow">Bu site ${data.count} kez ziyaret edildi.</span>`;
+        if (document.getElementById('visitor-count-en'))
+          document.getElementById('visitor-count-en').innerHTML =
+            `<span class="inline-block bg-blue-700 text-white px-4 py-2 rounded font-semibold shadow">This site has been visited ${data.count} times.</span>`;
+      } catch (error) {
+        if (document.getElementById('visitor-count-tr'))
+          document.getElementById('visitor-count-tr').textContent = "Ziyaretçi sayısı alınamadı.";
+        if (document.getElementById('visitor-count-en'))
+          document.getElementById('visitor-count-en').textContent = "Visitor count could not be loaded.";
+      }
+    }
+    window.addEventListener('DOMContentLoaded', updateVisitorCount);
   </script>
 </body>
 </html>
