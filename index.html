@@ -101,6 +101,8 @@
         <div class="mt-6">
           <a href="mailto:ataozkan.md@gmail.com?subject=appointment%20request" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Book an Appointment</a>
         </div>
+<p id="visitor-count-en" class="mt-4 text-sm text-gray-600 dark:text-gray-300"></p>
+
       </section>
     </div>
 
@@ -151,22 +153,11 @@
         <div class="mt-6">
           <a href="mailto:ataozkan.md@gmail.com?subject=randevu%20talebi" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Randevu Al</a>
         </div>
+<p id="visitor-count-tr" class="mt-4 text-sm text-gray-600 dark:text-gray-300"></p>
+
       </section>
     </div>
-  
-<p class="text-center text-sm text-gray-700 dark:text-gray-300 mt-8">
-  Bu site <span id="counter">yükleniyor...</span> kez ziyaret edildi.
-</p>
-
-<script>
-  fetch('https://api.countapi.xyz/hit/drataozkan-ziyaret/visits')
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('counter').innerText = data.value;
-    });
-</script>
-
-</main>
+  </main>
 
   <footer class="bg-white dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm">
     &copy; 2025 Dr. Atakan Özkan. All rights reserved.
