@@ -51,31 +51,28 @@
 </head>
 <body class="bg-white dark:bg-blue-950 dark:text-gray-100 text-gray-900 font-sans">
   <header class="bg-sky-200 dark:bg-sky-500 shadow p-6 sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <!-- Logo ve isim -->
-      <a href="#" class="flex items-center group select-none">
-        <!-- AO Monogram Logo (SVG) -->
-        <span class="inline-block w-10 h-10 rounded-full bg-white/80 dark:bg-blue-900/80 shadow mr-3 flex items-center justify-center border border-blue-200 dark:border-blue-800 transition-transform group-hover:scale-105 duration-300">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <text x="2" y="22" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="bold" fill="#2563eb">A</text>
-            <text x="15" y="22" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="bold" fill="#0ea5e9">O</text>
-          </svg>
-        </span>
-        <span class="text-lg font-bold tracking-wide text-blue-900 dark:text-blue-50 transition-colors">Atakan Özkan</span>
-      </a>
-      <!-- Menü -->
-      <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#tr-content" class="nav-link hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-200">Hakkımda</a>
-        <a href="#contact-tr" class="nav-link hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-200">İletişim</a>
-      </nav>
-      <!-- Sağdaki butonlar -->
-      <div class="flex gap-4 items-center">
-        <button id="toggle-theme" onclick="toggleTheme()">🌌</button>
-        <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
-        <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
-      </div>
+  <div class="max-w-5xl mx-auto flex justify-between items-center">
+    <!-- Logo ve isim -->
+    <a href="#" class="flex items-center group select-none">
+      <!-- PNG LOGO (apple-touch-icon.png) -->
+      <span class="inline-block w-10 h-10 rounded-full bg-white/80 dark:bg-blue-900/80 shadow mr-3 flex items-center justify-center border border-blue-200 dark:border-blue-800 transition-transform group-hover:scale-105 duration-300 overflow-hidden">
+        <img src="/apple-touch-icon.png" alt="AO Logo" class="w-8 h-8 object-contain" />
+      </span>
+      <span class="text-lg font-bold tracking-wide text-blue-900 dark:text-blue-50 transition-colors">Atakan Özkan</span>
+    </a>
+    <!-- Menü -->
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="#tr-content" class="nav-link hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-200">Hakkımda</a>
+      <a href="#contact-tr" class="nav-link hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-200">İletişim</a>
+    </nav>
+    <!-- Sağdaki butonlar -->
+    <div class="flex gap-4 items-center">
+      <button id="toggle-theme" onclick="toggleTheme()">🌌</button>
+      <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
+      <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="max-w-5xl mx-auto p-6">
     <p class="text-center text-lg text-blue-800 dark:text-blue-300 font-semibold mb-6 animate-pulse slide-in" id="animated-message">
