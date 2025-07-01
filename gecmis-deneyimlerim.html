@@ -32,8 +32,8 @@
   </script>
 </head>
 <body class="bg-blue-950 text-gray-100 font-sans">
-  <header class="bg-sky-500 p-6 shadow">
-  <div class="max-w-4xl mx-auto flex justify-between items-center">
+  <header class="bg-sky-200 dark:bg-sky-500 shadow p-6 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto flex justify-between items-center">
     <!-- Logo ve isim -->
     <a href="index.html" class="flex items-center group select-none">
       <span class="inline-block w-10 h-10 rounded-full bg-white/80 dark:bg-blue-900/80 shadow mr-3 flex items-center justify-center border border-blue-200 dark:border-blue-800 transition-transform group-hover:scale-105 duration-300 overflow-hidden">
@@ -46,10 +46,13 @@
         Atakan Özkan
       </span>
     </a>
+    <!-- Menü -->
+    <nav class="hidden md:flex gap-6 text-sm font-medium"></nav>
     <!-- Sağdaki butonlar -->
-    <div class="space-x-2 flex items-center">
-      <button onclick="switchLang('tr')">🇹🇷</button>
-      <button onclick="switchLang('en')">🇺🇸</button>
+    <div class="flex gap-4 items-center">
+      <button id="toggle-theme" onclick="toggleTheme()">🌌</button>
+      <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
+      <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
     </div>
   </div>
 </header>
