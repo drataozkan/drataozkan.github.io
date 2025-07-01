@@ -28,22 +28,51 @@
     .slide-in {
       animation: slideIn 1.5s ease-out forwards;
     }
+    /* Menü animasyonlu underline */
+    .nav-link {
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #2563eb;
+      transition: width .3s;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
   </style>
 </head>
 <body class="bg-white dark:bg-blue-950 dark:text-gray-100 text-gray-900 font-sans">
   <header class="bg-sky-200 dark:bg-sky-500 shadow p-6 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto flex justify-between items-center">
-    
-<nav class="hidden md:flex gap-6 text-sm font-medium">
-  <a href="#tr-content" class="hover:underline">Hakkımda</a>
-  <a href="#contact-tr" class="hover:underline">İletişim</a>
-</nav>
-
-  
+      <!-- Logo ve isim -->
+      <a href="#" class="flex items-center group select-none">
+        <!-- AO Monogram Logo (SVG) -->
+        <span class="inline-block w-10 h-10 rounded-full bg-white/80 dark:bg-blue-900/80 shadow mr-3 flex items-center justify-center border border-blue-200 dark:border-blue-800 transition-transform group-hover:scale-105 duration-300">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <text x="2" y="22" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="bold" fill="#2563eb">A</text>
+            <text x="15" y="22" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="bold" fill="#0ea5e9">O</text>
+          </svg>
+        </span>
+        <span class="text-lg font-bold tracking-wide text-blue-900 dark:text-blue-50 transition-colors">Atakan Özkan</span>
+      </a>
+      <!-- Menü -->
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#tr-content" class="nav-link hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-200">Hakkımda</a>
+        <a href="#contact-tr" class="nav-link hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-200">İletişim</a>
+      </nav>
+      <!-- Sağdaki butonlar -->
       <div class="flex gap-4 items-center">
         <button id="toggle-theme" onclick="toggleTheme()">🌌</button>
-<button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
-<button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
+        <button id="btn-tr" onclick="switchLang('tr')">🇹🇷</button>
+        <button id="btn-en" onclick="switchLang('en')">🇺🇸</button>
       </div>
     </div>
   </header>
@@ -86,12 +115,12 @@
       <section id="contact" class="my-10 text-center" data-aos="fade-up">
         <h2 class="text-xl font-semibold mb-4">Connect With Me</h2>
         <div class="flex flex-wrap justify-center gap-6 text-lg mb-6">
-          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
-          <a href="https://substack.com/@drataozkan" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
-          <a href="https://x.com/dr_ataozkan" target="_blank" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
-          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
-          <a href="https://github.com/drataozkan" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
-          <a href="https://medium.com/@drataozkan" target="_blank" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" rel="noopener noreferrer" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
+          <a href="https://substack.com/@drataozkan" target="_blank" rel="noopener noreferrer" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" rel="noopener noreferrer" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
+          <a href="https://github.com/drataozkan" target="_blank" rel="noopener noreferrer" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
+          <a href="https://medium.com/@drataozkan" target="_blank" rel="noopener noreferrer" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
         </div>
         <div class="text-gray-800 dark:text-gray-300 text-base">
           <p class="mb-1">📧 ataozkan.md@gmail.com</p>
@@ -100,7 +129,6 @@
         <div class="mt-6">
           <a href="mailto:ataozkan.md@gmail.com?subject=appointment%20request" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Book an Appointment</a>
         </div>
-        <!-- Ziyaretçi sayacı İngilizce için -->
         <div id="visitor-count-en" class="mt-4 mb-0"></div>
       </section>
     </div>
@@ -138,12 +166,12 @@
       <section id="contact-tr" class="my-10 text-center" data-aos="fade-up">
         <h2 class="text-xl font-semibold mb-4">İletişim</h2>
         <div class="flex flex-wrap justify-center gap-6 text-lg mb-6">
-          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
-          <a href="https://substack.com/@drataozkan" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
-          <a href="https://x.com/dr_ataozkan" target="_blank" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
-          <a href="https://www.instagram.com/ataoz.kan" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
-          <a href="https://github.com/drataozkan" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
-          <a href="https://medium.com/@drataozkan" target="_blank" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
+          <a href="https://www.linkedin.com/in/drataozkan/" target="_blank" rel="noopener noreferrer" class="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded shadow-md">LinkedIn</a>
+          <a href="https://substack.com/@drataozkan" target="_blank" rel="noopener noreferrer" class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded shadow-md">Substack</a>
+          <a href="https://x.com/dr_ataozkan" target="_blank" rel="noopener noreferrer" class="bg-black hover:bg-gray-800 text-white py-2 px-4 rounded shadow-md">X (Twitter)</a>
+          <a href="https://www.instagram.com/ataoz.kan" target="_blank" rel="noopener noreferrer" class="bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded shadow-md">Instagram</a>
+          <a href="https://github.com/drataozkan" target="_blank" rel="noopener noreferrer" class="bg-gray-800 hover:bg-gray-900 text-white py-2 px-4 rounded shadow-md">GitHub</a>
+          <a href="https://medium.com/@drataozkan" target="_blank" rel="noopener noreferrer" class="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded shadow-md">Medium</a>
         </div>
         <div class="text-gray-800 dark:text-gray-300 text-base">
           <p class="mb-1">📧 ataozkan.md@gmail.com</p>
@@ -152,7 +180,6 @@
         <div class="mt-6">
           <a href="mailto:ataozkan.md@gmail.com?subject=randevu%20talebi" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Randevu Al</a>
         </div>
-        <!-- Ziyaretçi sayacı Türkçe için -->
         <div id="visitor-count-tr" class="mt-4 mb-0"></div>
       </section>
     </div>
@@ -214,7 +241,6 @@
       });
     }
 
-
     AOS.init();
   </script>
   <script>
@@ -223,20 +249,4 @@
         const response = await fetch('https://visitor-counter-drataozkan.onrender.com/');
         const data = await response.json();
         // Türkçe ve İngilizce alanlara yaz (Kutucuk yok, koyu renkli ve kalın)
-        if (document.getElementById('visitor-count-tr'))
-          document.getElementById('visitor-count-tr').innerHTML =
-            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">Bu site bugün ${data.count} kez ziyaret edildi.</span>`;
-        if (document.getElementById('visitor-count-en'))
-          document.getElementById('visitor-count-en').innerHTML =
-            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">This site has been visited ${data.count} times today.</span>`;
-      } catch (error) {
-        if (document.getElementById('visitor-count-tr'))
-          document.getElementById('visitor-count-tr').textContent = "Ziyaretçi sayısı alınamadı.";
-        if (document.getElementById('visitor-count-en'))
-          document.getElementById('visitor-count-en').textContent = "Visitor count could not be loaded.";
-      }
-    }
-    window.addEventListener('DOMContentLoaded', updateVisitorCount);
-  </script>
-</body>
-</html>
+        if (document.getElement
