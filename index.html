@@ -101,7 +101,7 @@
           <a href="mailto:ataozkan.md@gmail.com?subject=appointment%20request" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded">Book an Appointment</a>
         </div>
         <!-- Ziyaretçi sayacı İngilizce için -->
-        <div id="visitor-count-en" class="my-4"></div>
+        <div id="visitor-count-en" class="mt-4 mb-0"></div>
       </section>
     </div>
 
@@ -225,10 +225,10 @@
         // Türkçe ve İngilizce alanlara yaz (Kutucuk yok, koyu renkli ve kalın)
         if (document.getElementById('visitor-count-tr'))
           document.getElementById('visitor-count-tr').innerHTML =
-            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">Bu site ${data.count} kez ziyaret edildi.</span>`;
+            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">Bu site bugün ${data.count} kez ziyaret edildi.</span>`;
         if (document.getElementById('visitor-count-en'))
           document.getElementById('visitor-count-en').innerHTML =
-            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">This site has been visited ${data.count} times.</span>`;
+            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">This site has been visited ${data.count} times today.</span>`;
       } catch (error) {
         if (document.getElementById('visitor-count-tr'))
           document.getElementById('visitor-count-tr').textContent = "Ziyaretçi sayısı alınamadı.";
