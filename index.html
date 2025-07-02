@@ -183,22 +183,11 @@
     </div>
   </main>
 
-  <footer id="site-footer" class="bg-gray-100 dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm transition-colors duration-300">
-    &copy; 2025 Dr. Atakan Özkan. <span id="footer-rights">Her hakkı saklıdır.</span>
+  <footer class="bg-white dark:bg-sky-900 p-4 text-center text-gray-600 dark:text-gray-400 text-sm">
+    &copy; 2025 Dr. Atakan Özkan. All rights reserved.
   </footer>
 
   <script>
-    // Footer'daki yazıyı dil seçimine göre ayarla
-    function updateFooter(lang) {
-      const footerRights = document.getElementById('footer-rights');
-      if (lang === 'tr') {
-        footerRights.textContent = 'Her hakkı saklıdır.';
-      } else {
-        footerRights.textContent = 'All rights reserved.';
-      }
-    }
-
-    // switchLang fonksiyonunu güncelledik!
     function switchLang(lang) {
       document.getElementById('en-content').classList.add('hidden');
       document.getElementById('tr-content').classList.add('hidden');
@@ -218,11 +207,10 @@
         if (animatedMessage) animatedMessage.textContent = 'Entrust me to Turkish doctors - Mustafa Kemal ATATÜRK';
         btnEn.classList.add('underline', 'font-bold');
       }
-      updateFooter(lang); // FOOTER YAZISINI GÜNCELLE
+
       setTimeout(() => AOS.refresh(), 50);
     }
 
-    // Sayfa ilk yüklendiğinde Türkçe başlat ve footer'ı ayarla
     switchLang('tr');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
@@ -252,3 +240,16 @@
     }
 
     AOS.init();
+  </script>
+  <script>
+    async function updateVisitorCount() {
+      try {
+        const response = await fetch('https://visitor-counter-drataozkan.onrender.com/');
+        const data = await response.json();
+        // Türkçe ve İngilizce alanlara yaz (Kutucuk yok, koyu renkli ve kalın)
+        if (document.getElementById('visitor-count-tr'))
+          document.getElementById('visitor-count-tr').innerHTML =
+            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">Bu site bugün ${data.count} kez ziyaret edildi.</span>`;
+        if (document.getElementById('visitor-count-en'))
+          document.getElementById('visitor-count-en').innerHTML =
+            `<span class="text-gray-700 dark:text-gray-200 font-semibold text-base">This site has been visited ${data.count} times
