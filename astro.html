@@ -75,11 +75,11 @@
         const translations = {
             tr: {
                 siteTitle: "Atakan Özkan", navAbout: "Hakkımda", navExpertise: "Uzmanlık Alanları", navInterests: "İlgi Alanlarım", navContact: "İletişim", navAboutMobile: "Hakkımda", navExpertiseMobile: "Uzmanlık Alanları", navInterestsMobile: "İlgi Alanlarım", navContactMobile: "İletişim", footerRights: "© 2025 Atakan Özkan. Tüm hakları saklıdır.",
-                astronomyTitle: "Astronomi", astronomyText1: "Bu sayfa astronomi ilgi alanıma adanmıştır. Yakında buraya bu alandaki deneyimlerimi, gözlemlerimi ve düşüncelerimi ekleyeceğim.", astronomyText2: "Evrenin gizemleri ve gök cisimlerinin hareketi her zaman ilgimi çekmiştir. Bu tutkumu burada paylaşmaktan heyecan duyuyorum."
+                astronomyTitle: "Astronomi", astronomyText1: "Bu sayfa astronomi ilgi alanıma ayrılmıştır.
             },
             en: {
                 siteTitle: "Atakan Özkan", navAbout: "About", navExpertise: "Expertise", navInterests: "Interests", navContact: "Contact", navAboutMobile: "About", navExpertiseMobile: "Expertise", navInterestsMobile: "Interests", navContactMobile: "Contact", footerRights: "© 2025 Atakan Özkan. All rights reserved.",
-                astronomyTitle: "Astronomy", astronomyText1: "This page is dedicated to my interest in astronomy. I will soon add my experiences, observations, and thoughts in this field here.", astronomyText2: "The mysteries of the universe and the movement of celestial bodies have always fascinated me. I am excited to share my passion here."
+                astronomyTitle: "Astronomy", astronomyText1: "This page is dedicated to my interest in astronomy.
             }
         };
         const setLanguage = (lang) => { document.documentElement.lang = lang; document.querySelectorAll('[data-key]').forEach(elem => { const key = elem.getAttribute('data-key'); if (translations[lang]?.[key]) elem.textContent = translations[lang][key]; }); document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); const desktopBtn = document.getElementById(`lang-${lang}`); const mobileBtn = document.getElementById(`lang-${lang}-mobile`); if (desktopBtn) desktopBtn.classList.add('active'); if (mobileBtn) mobileBtn.classList.add('active'); localStorage.setItem('language', lang); };
