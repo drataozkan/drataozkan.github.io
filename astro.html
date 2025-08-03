@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atakan Özkan - Astronomi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .lang-btn.active { color: #2563eb; font-weight: 700; }
+        .prose { max-width: 80ch; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900" data-key="siteTitle">Atakan Özkan</a>
+            <div class="flex items-center">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition duration-300" data-key="navAbout">Hakkımda</a>
+                    <a href="index.html#expertise" class="text-gray-600 hover:text-blue-600 transition duration-300" data-key="navExpertise">Uzmanlık Alanları</a>
+                    <a href="index.html#interests" class="text-gray-600 hover:text-blue-600 transition duration-300" data-key="navInterests">İlgi Alanlarım</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition duration-300" data-key="navContact">İletişim</a>
+                </nav>
+                <div class="hidden md:flex items-center ml-8 border-l border-gray-200 pl-6 space-x-2">
+                    <button id="lang-tr" class="lang-btn text-gray-500 hover:text-blue-600 transition-colors">TR</button>
+                    <span class="text-gray-300">/</span>
+                    <button id="lang-en" class="lang-btn text-gray-500 hover:text-blue-600 transition-colors">EN</button>
+                </div>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 border-t border-gray-100">
+            <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-600" data-key="navAboutMobile">Hakkımda</a>
+            <a href="index.html#expertise" class="block py-2 text-gray-600 hover:text-blue-600" data-key="navExpertiseMobile">Uzmanlık Alanları</a>
+            <a href="index.html#interests" class="block py-2 text-gray-600 hover:text-blue-600" data-key="navInterestsMobile">İlgi Alanlarım</a>
+            <a href="index.html#contact" class="block py-2 text-gray-600 hover:text-blue-600" data-key="navContactMobile">İletişim</a>
+            <div class="flex items-center mt-4 pt-4 border-t border-gray-200 space-x-2">
+                <button id="lang-tr-mobile" class="lang-btn text-gray-500 hover:text-blue-600 transition-colors">TR</button>
+                <span class="text-gray-300">/</span>
+                <button id="lang-en-mobile" class="lang-btn text-gray-500 hover:text-blue-600 transition-colors">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="bg-white">
+        <div class="container mx-auto px-6 py-16 md:py-24">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-key="astronomyTitle">Astronomi</h1>
+            <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop" 
+                 onerror="this.onerror=null;this.src='https://placehold.co/1200x600/e2e8f0/4a5568?text=Etkileyici+Galaksi';"
+                 alt="Etkileyici bir galaksi fotoğrafı" class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg mb-8">
+            <div class="prose lg:prose-xl max-w-none text-gray-600">
+                <p data-key="astronomyText1">Bu sayfa astronomi ilgi alanıma adanmıştır. Yakında buraya bu alandaki deneyimlerimi, gözlemlerimi ve düşüncelerimi ekleyeceğim.</p>
+                <p data-key="astronomyText2">Evrenin gizemleri ve gök cisimlerinin hareketi her zaman ilgimi çekmiştir. Bu tutkumu burada paylaşmaktan heyecan duyuyorum.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p data-key="footerRights">© 2025 Atakan Özkan. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            tr: {
+                siteTitle: "Atakan Özkan", navAbout: "Hakkımda", navExpertise: "Uzmanlık Alanları", navInterests: "İlgi Alanlarım", navContact: "İletişim", navAboutMobile: "Hakkımda", navExpertiseMobile: "Uzmanlık Alanları", navInterestsMobile: "İlgi Alanlarım", navContactMobile: "İletişim", footerRights: "© 2025 Atakan Özkan. Tüm hakları saklıdır.",
+                astronomyTitle: "Astronomi", astronomyText1: "Bu sayfa astronomi ilgi alanıma adanmıştır. Yakında buraya bu alandaki deneyimlerimi, gözlemlerimi ve düşüncelerimi ekleyeceğim.", astronomyText2: "Evrenin gizemleri ve gök cisimlerinin hareketi her zaman ilgimi çekmiştir. Bu tutkumu burada paylaşmaktan heyecan duyuyorum."
+            },
+            en: {
+                siteTitle: "Atakan Özkan", navAbout: "About", navExpertise: "Expertise", navInterests: "Interests", navContact: "Contact", navAboutMobile: "About", navExpertiseMobile: "Expertise", navInterestsMobile: "Interests", navContactMobile: "Contact", footerRights: "© 2025 Atakan Özkan. All rights reserved.",
+                astronomyTitle: "Astronomy", astronomyText1: "This page is dedicated to my interest in astronomy. I will soon add my experiences, observations, and thoughts in this field here.", astronomyText2: "The mysteries of the universe and the movement of celestial bodies have always fascinated me. I am excited to share my passion here."
+            }
+        };
+        const setLanguage = (lang) => { document.documentElement.lang = lang; document.querySelectorAll('[data-key]').forEach(elem => { const key = elem.getAttribute('data-key'); if (translations[lang]?.[key]) elem.textContent = translations[lang][key]; }); document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); const desktopBtn = document.getElementById(`lang-${lang}`); const mobileBtn = document.getElementById(`lang-${lang}-mobile`); if (desktopBtn) desktopBtn.classList.add('active'); if (mobileBtn) mobileBtn.classList.add('active'); localStorage.setItem('language', lang); };
+        document.addEventListener('DOMContentLoaded', () => { const savedLang = localStorage.getItem('language') || 'tr'; setLanguage(savedLang); ['lang-tr', 'lang-en', 'lang-tr-mobile', 'lang-en-mobile'].forEach(id => { const button = document.getElementById(id); if (button) { button.addEventListener('click', (e) => { setLanguage(e.target.id.includes('tr') ? 'tr' : 'en'); }); } }); const mobileMenuButton = document.getElementById('mobile-menu-button'); const mobileMenu = document.getElementById('mobile-menu'); if (mobileMenuButton && mobileMenu) { mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); } document.querySelectorAll('nav a, #mobile-menu a').forEach(link => { link.addEventListener('click', () => { if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); } }); }); });
+    </script>
+</body>
+</html>
