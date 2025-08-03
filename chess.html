@@ -79,11 +79,11 @@
         const translations = {
             tr: {
                 siteTitle: "Atakan Özkan", navAbout: "Hakkımda", navExpertise: "Uzmanlık Alanları", navInterests: "İlgi Alanlarım", navContact: "İletişim", navAboutMobile: "Hakkımda", navExpertiseMobile: "Uzmanlık Alanları", navInterestsMobile: "İlgi Alanlarım", navContactMobile: "İletişim", footerRights: "© 2025 Atakan Özkan. Tüm hakları saklıdır.",
-                chessTitle: "Satranç", chessText1: "Bu sayfa satranç tutkuma ayrılmıştır. Yakında buraya en sevdiğim açılışları, unutulmaz oyunlarımı ve strateji üzerine düşüncelerimi ekleyeceğim.", chessText2: "Satranç, stratejik düşünme ve öngörü yeteneğini geliştiren eşsiz bir oyundur. Bu zihin sporundaki yolculuğumu burada paylaşacağım."
+                chessTitle: "Satranç", chessText1: "Bu sayfa satranç tutkuma ayrılmıştır.
             },
             en: {
                 siteTitle: "Atakan Özkan", navAbout: "About", navExpertise: "Expertise", navInterests: "Interests", navContact: "Contact", navAboutMobile: "About", navExpertiseMobile: "Expertise", navInterestsMobile: "Interests", navContactMobile: "Contact", footerRights: "© 2025 Atakan Özkan. All rights reserved.",
-                chessTitle: "Chess", chessText1: "This page is dedicated to my passion for chess. I will soon add my favorite openings, memorable games, and thoughts on strategy here.", chessText2: "Chess is a unique game that develops strategic thinking and foresight. I will share my journey in this mind sport here."
+                chessTitle: "Chess", chessText1: "This page is dedicated to my passion for chess.
             }
         };
         const setLanguage = (lang) => { document.documentElement.lang = lang; document.querySelectorAll('[data-key]').forEach(elem => { const key = elem.getAttribute('data-key'); if (translations[lang]?.[key]) elem.textContent = translations[lang][key]; }); document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active')); const desktopBtn = document.getElementById(`lang-${lang}`); const mobileBtn = document.getElementById(`lang-${lang}-mobile`); if (desktopBtn) desktopBtn.classList.add('active'); if (mobileBtn) mobileBtn.classList.add('active'); localStorage.setItem('language', lang); };
